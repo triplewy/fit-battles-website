@@ -1,0 +1,42 @@
+.Upload {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Upload input {
+  width: 100%;
+  margin: 20px;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  transition: border-color 0.5s;
+}
+
+.Upload input:focus {
+  border-color: #739aff;
+}
+
+.Upload img {
+  max-width: 540px;
+  max-height: 720px;
+  border-radius: 8px;
+}
+
+.Upload button {
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  background: none;
+}
+
+@media (max-width: 750px) {
+  .Upload img {
+    max-width: 95%;
+  }
+}

@@ -22,11 +22,29 @@
   color: #61dafb;
 }
 
+.bodyContent {
+  margin: 90px auto;
+  max-width: 1190px;
+}
+
+.section {
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 750px) {
+  .bodyContent {
+    max-width: 90%;
   }
 }

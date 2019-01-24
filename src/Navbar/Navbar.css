@@ -1,0 +1,105 @@
+.Navbar {
+  background-image: linear-gradient(#54d7ff, #739aff);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbarContent {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  max-width: 1190px;
+  height: 56px;
+  color: white;
+}
+
+.navbarContent>div:first-child, .navbarContent>div:last-child {
+  flex: 1;
+  padding: 2px 0;
+}
+
+.navbarContent>* {
+  height: 100%;
+  display: flex;
+}
+
+.navbarContent ul {
+  display: flex;
+}
+
+.mobileNavbarLeft {
+  display: flex;
+}
+
+.navbarContent ul.stackNavigation {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  flex-direction: column;
+  background-color: #739aff;
+  overflow: hidden;
+  transition: max-width 0.5s;
+}
+
+.navbarContent ul.stackNavigation>li {
+  margin-right: 0;
+  padding: 10px 30px;
+}
+
+.navbarContent ul.stackNavigation>li:last-child {
+  margin-bottom: 0;
+}
+
+.navbarContent li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 40px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.navbarContent li:hover {
+  box-shadow: 0 2px 0 0 white;
+}
+
+.navbarContent img {
+  margin: auto 0;
+  width: auto;
+}
+.navbarContent img.logo {
+  height: 50px;
+}
+
+.navbarContent img.navigationIcon {
+  height: 24px;
+}
+
+.navbarContent h1 {
+  font-size: 21px;
+}
+
+.navbarContent a {
+  color: white;
+}
+
+.navbarContent a:hover {
+  text-decoration: none;
+}
+
+.navbarContent a:focus {
+  text-decoration: none;
+}
+
+.active {
+  box-shadow: 0 2px 0 0 white;
+}
+
+@media (max-width: 750px) {
+  .navbarContent {
+    max-width: 90%;
+  }
+}
