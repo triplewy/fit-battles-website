@@ -45,7 +45,7 @@
 
 .navbarContent ul.stackNavigation>li {
   margin-right: 0;
-  padding: 10px 30px;
+  padding: 30px 30px;
 }
 
 .navbarContent ul.stackNavigation>li:last-child {
@@ -101,5 +101,10 @@
 @media (max-width: 750px) {
   .navbarContent {
     max-width: 90%;
+  }
+
+  .active {
+    background-color: #54d7ff;
+    box-shadow: none;
   }
 }

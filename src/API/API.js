@@ -45,3 +45,15 @@ function postParams(body) {
 export function fetchUpload(body) {
   return fetch(`${url}/upload`, postParams(body))
 }
+
+export function fetchBattle() {
+  return fetch(`${url}/vote`, getParams)
+}
+
+export function fetchVote(body) {
+  return fetch(`${url}/vote`, postParams(body))
+}
+
+export function fetchLeaderboard() {
+  return fetch(`${url}/leaderboard`, getParams)
+}

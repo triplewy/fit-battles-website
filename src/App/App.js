@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Navbar from '../Navbar/Navbar'
 import Home from '../Home/Home'
-import Vote from '../Vote/Vote'
+import Vote from '../Vote/VoteStartPage'
 import Leaderboard from '../Leaderboard/Leaderboard'
 import Upload from '../Upload/Upload'
 import './App.css';

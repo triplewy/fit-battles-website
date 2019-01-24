@@ -10,7 +10,8 @@ class Navbar extends Component {
     super(props)
 
     this.state = {
-      toggleNavigation: false
+      toggleNavigation: false,
+      selected: 0
     }
   }
 
@@ -26,33 +27,33 @@ class Navbar extends Component {
                   <img className='navigationIcon' src={navigationIcon} />
                 </button>
                 <ul className='stackNavigation' style={{maxWidth: this.state.toggleNavigation ? '400px' : 0}}>
-                  <li className='active'>
-                    <Link to='/'>Home</Link>
+                  <li className={ this.state.selected === 0 ? 'active' : '' }>
+                    <Link to='/' onClick={() => this.setState({ toggleNavigation: !this.state.toggleNavigation, selected: 0 })}>Home</Link>
                   </li>
-                  <li>
-                    <Link to='/vote'>Vote</Link>
+                  <li className={ this.state.selected === 1 ? 'active' : '' }>
+                    <Link to='/vote' onClick={() => this.setState({ toggleNavigation: !this.state.toggleNavigation, selected: 1 })}>Vote</Link>
                   </li>
-                  <li>
-                    <Link to='/leaderboard'>Leaderboard</Link>
+                  <li className={ this.state.selected === 2 ? 'active' : '' }>
+                    <Link to='/leaderboard' onClick={() => this.setState({ toggleNavigation: !this.state.toggleNavigation, selected: 2 })}>Leaderboard</Link>
                   </li>
-                  <li>
-                    <Link to='/upload'>Upload</Link>
+                  <li className={ this.state.selected === 3 ? 'active' : '' }>
+                    <Link to='/upload' onClick={() => this.setState({ toggleNavigation: !this.state.toggleNavigation, selected: 3 })}>Upload</Link>
                   </li>
                 </ul>
               </div>
               :
               <ul>
-                <li className='active'>
-                  <Link to='/'>Home</Link>
+                <li className={ this.state.selected === 0 ? 'active' : '' }>
+                  <Link to='/' onClick={() => this.setState({ selected: 0 })}>Home</Link>
                 </li>
-                <li>
-                  <Link to='/vote'>Vote</Link>
+                <li className={ this.state.selected === 1 ? 'active' : '' }>
+                  <Link to='/vote' onClick={() => this.setState({ selected: 1 })}>Vote</Link>
                 </li>
-                <li>
-                  <Link to='/leaderboard'>Leaderboard</Link>
+                <li className={ this.state.selected === 2 ? 'active' : '' }>
+                  <Link to='/leaderboard' onClick={() => this.setState({ selected: 2 })}>Leaderboard</Link>
                 </li>
-                <li>
-                  <Link to='/upload'>Upload</Link>
+                <li className={ this.state.selected === 3 ? 'active' : '' }>
+                  <Link to='/upload' onClick={() => this.setState({ selected: 3 })}>Upload</Link>
                 </li>
               </ul>
             }
@@ -63,7 +64,6 @@ class Navbar extends Component {
           <div>
 
           </div>
-          {/* <h1>Fit Battles</h1> */}
         </div>
       </div>
     )
